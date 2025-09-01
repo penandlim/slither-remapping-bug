@@ -23,6 +23,10 @@ jobs:
       - name: Show Forge version
         run: |
           forge --version
+      
+      - name: Install dependencies via soldeer
+        run: |
+          forge soldeer install
 
       - name: Run Forge fmt
         run: |
@@ -38,3 +42,20 @@ jobs:
         run: |
           forge test -vvv
         id: test
+
+  slither:
+    name: Slither
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+
+      - name: Install dependencies via soldeer
+        run: |
+          forge soldeer install
+
+      - uses: crytic/slither-action@v0.4.1
