@@ -1,0 +1,11 @@
+{
+  "name": "slither-remapping-bug",
+  "version": "1.0.0",
+  "description": "Minimal reproducible example for Slither's scoped remapping bug",
+  "scripts": {
+    "build": "forge build",
+    "build:slither": "forge clean && forge build --build-info",
+    "slither": "npm run build:slither && slither . --ignore-compile"
+  },
+  "devDependencies": {}
+}

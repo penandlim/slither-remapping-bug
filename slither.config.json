@@ -1,0 +1,4 @@
+{
+  "filter_paths": "(test/|script/|lib/forge-std/)",
+  "compile_force_framework": "foundry"
+}

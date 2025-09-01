@@ -1,0 +1,46 @@
+'forge clean' running (wd: /Users/user/Documents/slither-remapping-bug)
+'forge config --json' running
+'forge build --build-info --skip */test/** */script/** --force' running (wd: /Users/user/Documents/slither-remapping-bug)
+ERROR:SlitherSolcParsing:crytic-compile returned an empty AST. If you are trying to analyze a contract from etherscan or similar make sure it has source code available.
+ERROR:SlitherSolcParsing:crytic-compile returned an empty AST. If you are trying to analyze a contract from etherscan or similar make sure it has source code available.
+ERROR:SlitherSolcParsing:crytic-compile returned an empty AST. If you are trying to analyze a contract from etherscan or similar make sure it has source code available.
+ERROR:SlitherSolcParsing:crytic-compile returned an empty AST. If you are trying to analyze a contract from etherscan or similar make sure it has source code available.
+ERROR:SlitherSolcParsing:crytic-compile returned an empty AST. If you are trying to analyze a contract from etherscan or similar make sure it has source code available.
+ERROR:SlitherSolcParsing:crytic-compile returned an empty AST. If you are trying to analyze a contract from etherscan or similar make sure it has source code available.
+ERROR:Slither:Failed to resolved name for reference id 2448 in /Users/user/Documents/slither-remapping-bug/dependencies/tokenized-strategy-3.0.4/src/BaseStrategy.sol.
+ERROR:Slither:Failed to resolved name for reference id 2484 in /Users/user/Documents/slither-remapping-bug/dependencies/tokenized-strategy-3.0.4/src/BaseStrategy.sol.
+ERROR:Slither:Failed to resolved name for reference id 2280 in /Users/user/Documents/slither-remapping-bug/dependencies/tokenized-strategy-3.0.4/src/BaseStrategy.sol.
+ERROR:Slither:Failed to resolved name for reference id 2280 in /Users/user/Documents/slither-remapping-bug/dependencies/tokenized-strategy-3.0.4/src/interfaces/ITokenizedStrategy.sol.
+ERROR:Slither:Failed to resolved name for reference id 2484 in /Users/user/Documents/slither-remapping-bug/dependencies/tokenized-strategy-3.0.4/src/interfaces/ITokenizedStrategy.sol.
+ERROR:Slither:Failed to resolved name for reference id 2448 in /Users/user/Documents/slither-remapping-bug/dependencies/tokenized-strategy-3.0.4/src/interfaces/ITokenizedStrategy.sol.
+ERROR:Slither:Failed to resolved name for reference id 2280 in /Users/user/Documents/slither-remapping-bug/src/TestStrategy.sol.
+ERROR:Slither:Failed to resolved name for reference id 2448 in /Users/user/Documents/slither-remapping-bug/src/TestStrategy.sol.
+ERROR:Slither:Failed to resolved name for reference id 2484 in /Users/user/Documents/slither-remapping-bug/src/TestStrategy.sol.
+Traceback (most recent call last):
+  File "/Users/user/.pyenv/versions/3.11.10/bin/slither", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/user/.pyenv/versions/3.11.10/lib/python3.11/site-packages/slither/__main__.py", line 776, in main
+    main_impl(all_detector_classes=detectors, all_printer_classes=printers)
+  File "/Users/user/.pyenv/versions/3.11.10/lib/python3.11/site-packages/slither/__main__.py", line 882, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/.pyenv/versions/3.11.10/lib/python3.11/site-packages/slither/__main__.py", line 107, in process_all
+    ) = process_single(compilation, args, detector_classes, printer_classes)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/.pyenv/versions/3.11.10/lib/python3.11/site-packages/slither/__main__.py", line 80, in process_single
+    slither = Slither(target, ast_format=ast, **vars(args))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/.pyenv/versions/3.11.10/lib/python3.11/site-packages/slither/slither.py", line 202, in __init__
+    self._init_parsing_and_analyses(kwargs.get("skip_analyze", False))
+  File "/Users/user/.pyenv/versions/3.11.10/lib/python3.11/site-packages/slither/slither.py", line 211, in _init_parsing_and_analyses
+    raise e
+  File "/Users/user/.pyenv/versions/3.11.10/lib/python3.11/site-packages/slither/slither.py", line 207, in _init_parsing_and_analyses
+    parser.parse_contracts()
+  File "/Users/user/.pyenv/versions/3.11.10/lib/python3.11/site-packages/slither/solc_parsing/slither_compilation_unit_solc.py", line 508, in parse_contracts
+    target = resolve_remapping_and_renaming(contract_parser, i)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/.pyenv/versions/3.11.10/lib/python3.11/site-packages/slither/solc_parsing/slither_compilation_unit_solc.py", line 494, in resolve_remapping_and_renaming
+    assert target, f"Contract {contract_name} not found"
+           ^^^^^^
+AssertionError: Contract IERC20Permit not found

@@ -1,0 +1,21 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["dependencies"]
+solc = "0.8.28"
+remappings = [
+    "@openzeppelin/contracts/=dependencies/@openzeppelin-contracts-5.3.0/",
+    "dependencies/tokenized-strategy-3.0.4/:@openzeppelin/=dependencies/tokenized-strategy-3.0.4/lib/openzeppelin-contracts/",
+    "forge-std/=lib/forge-std/src/",
+    "tokenized-strategy/=dependencies/tokenized-strategy-3.0.4/",
+]
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+
+[soldeer]
+recursive_deps = true
+remappings_location = "config"
+
+[dependencies]
+"@openzeppelin-contracts" = "5.3.0"
+tokenized-strategy = { version = "3.0.4", git = "https://github.com/yearn/tokenized-strategy.git", tag = "v3.0.4" }
